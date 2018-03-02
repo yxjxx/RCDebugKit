@@ -7,11 +7,15 @@
 //
 
 #import "RCAppDelegate.h"
+#import "RCFPSLabelHeader.h"
 
 @implementation RCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+#ifdef DEBUG
+    RC_ADD_FPS_LABEL
+#endif
     // Override point for customization after application launch.
     return YES;
 }

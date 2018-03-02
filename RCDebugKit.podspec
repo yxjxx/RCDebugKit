@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'RCDebugKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of RCDebugKit.'
+  s.summary          = 'Rico\'s debug tool collection.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Rico's debug tool collection.
                        DESC
 
   s.homepage         = 'https://github.com/yxjxx/RCDebugKit'
@@ -30,7 +30,17 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'RCDebugKit/Classes/**/*'
+  # s.default_subspecs = 'Core', 'FPSLabel'
+  # s.source_files = 'RCDebugKit/Classes/**/*'
+
+  s.subspec 'FPSLabel' do |fpslabel|
+    fpslabel.requires_arc = true
+    fpslabel.source_files = 'RCDebugKit/Classes/YYFPSLabel/*.{h,m}'
+    fpslabel.public_header_files = 'RCDebugKit/Classes/YYFPSLabel/*.h'
+    fpslabel.frameworks = 'Foundation', 'UIKit'
+    fpslabel.libraries = 'stdc++.6', 'stdc++'
+    # fpslabel.dependency 'YYText'
+  end 
   
   # s.resource_bundles = {
   #   'RCDebugKit' => ['RCDebugKit/Assets/*.png']
