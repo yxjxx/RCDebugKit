@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Rico's debug tool collection.
+Rico's debug tool collection. Including FPSLabel, Toast...
                        DESC
 
   s.homepage         = 'https://github.com/yxjxx/RCDebugKit'
@@ -33,14 +33,30 @@ Rico's debug tool collection.
   # s.default_subspecs = 'Core', 'FPSLabel'
   # s.source_files = 'RCDebugKit/Classes/**/*'
 
+  s.subspec 'Core' do |core|
+    core.requires_arc = true
+    core.source_files = 'RCDebugKit/Classes/*.{h,m,mm}'
+    core.public_header_files = 'RCDebugKit/Classes/*.h'
+    core.frameworks = 'Foundation', 'UIKit'
+    core.libraries = 'stdc++.6', 'stdc++'
+  end
+
   s.subspec 'FPSLabel' do |fpslabel|
     fpslabel.requires_arc = true
     fpslabel.source_files = 'RCDebugKit/Classes/YYFPSLabel/*.{h,m}'
     fpslabel.public_header_files = 'RCDebugKit/Classes/YYFPSLabel/*.h'
     fpslabel.frameworks = 'Foundation', 'UIKit'
     fpslabel.libraries = 'stdc++.6', 'stdc++'
-    # fpslabel.dependency 'YYText'
-  end 
+  end
+
+  s.subspec 'Hint' do |hint|
+    hint.requires_arc = true
+    hint.source_files = 'RCDebugKit/Classes/Hint/*.{h,m}'
+    hint.public_header_files = 'RCDebugKit/Classes/Hint/*.h'
+    hint.frameworks = 'Foundation', 'UIKit'
+    hint.libraries = 'stdc++.6', 'stdc++'
+    hint.dependency 'RCDebugKit/Core'
+  end
   
   # s.resource_bundles = {
   #   'RCDebugKit' => ['RCDebugKit/Assets/*.png']

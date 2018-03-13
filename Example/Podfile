@@ -1,6 +1,7 @@
 use_frameworks!
 
 target 'RCDebugKit_Example' do
+  platform :ios, '8.0'
   pod 'RCDebugKit', :path => '../'
 
   target 'RCDebugKit_Tests' do
