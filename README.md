@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/RCDebugKit.svg?style=flat)](http://cocoapods.org/pods/RCDebugKit)
 [![Platform](https://img.shields.io/cocoapods/p/RCDebugKit.svg?style=flat)](http://cocoapods.org/pods/RCDebugKit)
 
+RCDebugKit is part of RCFoundationKit
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
