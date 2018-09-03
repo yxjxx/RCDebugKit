@@ -1,9 +1,9 @@
 PODS:
-  - RCDebugKit (0.1.0):
-    - RCDebugKit/FPSLabel (= 0.1.0)
-    - RCDebugKit/Hint (= 0.1.0)
-  - RCDebugKit/FPSLabel (0.1.0)
-  - RCDebugKit/Hint (0.1.0)
+  - RCDebugKit (0.1.2):
+    - RCDebugKit/Core (= 0.1.2)
+    - RCDebugKit/FPSLabel (= 0.1.2)
+  - RCDebugKit/Core (0.1.2)
+  - RCDebugKit/FPSLabel (0.1.2)
 
 DEPENDENCIES:
   - RCDebugKit (from `../`)
@@ -13,8 +13,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  RCDebugKit: 6a62dac161c99be8021e7361ac0c8e36f22fe0fb
+  RCDebugKit: 3a54bc30747f38618ebaee0544468031c5c2c7a8
 
-PODFILE CHECKSUM: 12e400d315956ca2ea2582a4eff0574e9192da6a
+PODFILE CHECKSUM: 4be8fda6abb730a0f26f699177c7b2e8b96296ef
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.3.1

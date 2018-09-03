@@ -30,7 +30,7 @@ Rico's debug tool collection. Including FPSLabel, Toast...
 
   s.ios.deployment_target = '8.0'
 
-  # s.default_subspecs = 'Core', 'FPSLabel'
+  s.default_subspecs = 'Core', 'FPSLabel'
   # s.source_files = 'RCDebugKit/Classes/**/*'
 
   s.subspec 'Core' do |core|
@@ -38,7 +38,6 @@ Rico's debug tool collection. Including FPSLabel, Toast...
     core.source_files = 'RCDebugKit/Classes/*.{h,m,mm}'
     core.public_header_files = 'RCDebugKit/Classes/*.h'
     core.frameworks = 'Foundation', 'UIKit'
-    core.libraries = 'stdc++.6', 'stdc++'
   end
 
   s.subspec 'FPSLabel' do |fpslabel|
@@ -46,7 +45,6 @@ Rico's debug tool collection. Including FPSLabel, Toast...
     fpslabel.source_files = 'RCDebugKit/Classes/YYFPSLabel/*.{h,m}'
     fpslabel.public_header_files = 'RCDebugKit/Classes/YYFPSLabel/*.h'
     fpslabel.frameworks = 'Foundation', 'UIKit'
-    fpslabel.libraries = 'stdc++.6', 'stdc++'
   end
 
   s.subspec 'Hint' do |hint|
@@ -54,7 +52,6 @@ Rico's debug tool collection. Including FPSLabel, Toast...
     hint.source_files = 'RCDebugKit/Classes/Hint/*.{h,m}'
     hint.public_header_files = 'RCDebugKit/Classes/Hint/*.h'
     hint.frameworks = 'Foundation', 'UIKit'
-    hint.libraries = 'stdc++.6', 'stdc++'
     hint.dependency 'RCDebugKit/Core'
   end
   
